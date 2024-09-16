@@ -210,18 +210,13 @@ class GTFSCurrentDayAnalysis:
                     
         
     def get_db_connection(self):
-        """ conn = psycopg2.connect(
+        conn = psycopg2.connect(
             host=os.getenv('DATABASE_HOST', 'db'),
             port=os.getenv('DATABASE_PORT', 5432),
             database=os.getenv('DATABASE_NAME', 'mydatabase'),
             user=os.getenv('DATABASE_USER', 'myuser'),
             password=os.getenv('DATABASE_PASSWORD', 'mypassword')
-        ) """
-        
-        
-        conn = psycopg2.connect(
-    database='enturanalysis', user='postgres', password='postgres', host='127.0.0.1', port= '5432'
-                           )
+        )
         return conn    
        
     

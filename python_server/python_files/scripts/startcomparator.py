@@ -14,6 +14,7 @@ from getrootdirectory import getRootDirectory
 from scripts.renewdata import renewData
 from exceptions.databasealredyfilled import DatabaseAlreadyFilledException
 
+print("starting application")
 #Step 1 download and extract data
 renewData()
 
@@ -25,9 +26,7 @@ try:
     todaysTrips=myAnalyser.writeToDatabase() 
 except:
     traceback.print_exc()
-finally:
-    print ("An error other than database filled error")
-    traceback.print_exc()    
+  
     
    
 #step 3 update the data between 00:15 and 23:45

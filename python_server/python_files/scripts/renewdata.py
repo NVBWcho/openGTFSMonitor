@@ -9,8 +9,6 @@ def renewData():
     output_path = os.path.join(getRootDirectory(),"data","gtfs"+".zip")
 
     # Download the file from `url` and save it locally under `output_path`:
-    print(url)
-    print(output_path)
     urllib.request.urlretrieve(url, output_path)
 
     zip_file_path = os.path.join(getRootDirectory(),"data","gtfs"+".zip")

@@ -17,10 +17,8 @@ COPY python_files/ /app/python_files/
 # Set the PYTHONPATH to include the current directory and the python_files directory
 ENV PYTHONPATH=/app:/app/python_files
 
-ENV PYTHONUNBUFFERED=1
-
 # Run the script  using the module syntax
 
-#CMD ["python", "-m", "scripts.app"]
+CMD ["python", "-m", "scripts.app"]
 
-CMD ["python", "-m", "scripts.startcomparator"]
+#CMD ["python", "-m", "scripts.startcomparator"]
