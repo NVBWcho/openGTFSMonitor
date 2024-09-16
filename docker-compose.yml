@@ -56,7 +56,7 @@ services:
   spring-api:
     build:
       context: ./spring_api
-      dockerfile: Dockerfile
+      dockerfile: DockerFile
     container_name: spring_api
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mydatabase
