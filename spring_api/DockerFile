@@ -1,6 +1,8 @@
 # Start with an OpenJDK base image
 FROM openjdk:17-jdk-slim
 
+
+
 # Install Maven to build the project
 RUN apt-get update && apt-get install -y maven
 
