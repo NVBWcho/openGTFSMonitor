@@ -17,6 +17,11 @@ COPY python_files/ /app/python_files/
 # Create the necessary directories
 RUN mkdir -p /app/python_files/data
 
+# Add debugging commands to list directory contents
+RUN echo "Directory contents before starting the app:" && \
+    ls -l /app/python_files && \
+    ls -l /app/python_files/data
+
 # Set the PYTHONPATH to include the current directory and the python_files directory
 ENV PYTHONPATH=/app:/app/python_files
 
