@@ -1,0 +1,7 @@
+psycopg2-binary
+numpy==1.26.3
+pandas==2.1.4
+requests==2.31.0
+gtfs-realtime-bindings==1.0.0
+protobuf==5.26.1
+python-dateutil==2.9.0

@@ -1,0 +1,26 @@
+# Start with an OpenJDK base image
+FROM openjdk:17-jdk-slim
+
+# Install Maven to build the project
+RUN apt-get update && apt-get install -y maven
+
+# Set the working directory for the build context
+WORKDIR /app
+
+# Copy the project source code (inside 'projectfiles') into the container
+COPY ./projectfiles /app
+
+# Build the project using Maven, skip the tests, and package the JAR
+RUN mvn clean package -DskipTests
+
+# Set the working directory for the runtime container
+WORKDIR /app/target
+
+# Copy the packaged JAR (assuming it's named gtfsAPI.jar) to the container's working directory
+COPY ./app/target/gtfsAPI.jar /app/gtfsAPI.jar
+
+# Expose the port on which the application will run (7005)
+EXPOSE 7005
+
+# Run the JAR file with the specified name
+CMD ["java", "-jar", "gtfsAPI.jar"]
