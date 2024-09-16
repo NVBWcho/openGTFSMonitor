@@ -63,7 +63,7 @@ services:
       SPRING_DATASOURCE_USERNAME: myuser
       SPRING_DATASOURCE_PASSWORD: mypassword
     ports:
-      - "3001:7005"
+      - "3001:8080"
     depends_on:
       - db
       - python_server
