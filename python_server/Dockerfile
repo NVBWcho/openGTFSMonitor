@@ -14,10 +14,17 @@ RUN pip install -r requirements.txt
 # Copy the entire python_files directory to /app in the container
 COPY python_files/ /app/python_files/
 
+# Create the necessary directories
+RUN mkdir -p /app/python_files/data
+
 # Set the PYTHONPATH to include the current directory and the python_files directory
 ENV PYTHONPATH=/app:/app/python_files
 
 ENV PYTHONUNBUFFERED=1
+
+RUN echo "Directory contents before starting the app:" && \
+    ls -l /app/python_files && \
+    ls -l /app/python_files/data
 
 # Run the script  using the module syntax
 

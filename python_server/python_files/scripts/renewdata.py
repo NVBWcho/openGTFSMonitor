@@ -6,8 +6,15 @@ from getrootdirectory import getRootDirectory
 def renewData():
     configuration=ConfigurationParameters()
     url=configuration.gtfsurl
+    print(url)
+    
     output_path = os.path.join(getRootDirectory(),"data","gtfs"+".zip")
-
+    print(output_path)
+    output_dir = os.path.join(getRootDirectory(), "data")
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
+    
     # Download the file from `url` and save it locally under `output_path`:
     urllib.request.urlretrieve(url, output_path)
 
