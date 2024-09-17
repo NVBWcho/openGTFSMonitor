@@ -20,3 +20,6 @@ Spinning up an application is simple- clone the repository, cd into it. Then you
  2. REALTIME_URL ->Link for the GTFS-RT feed
  3. ADDED_TRIPS-> Some data providers ADDED flag in TripDescriptor to specify that its a added trip. The value is false by default
  4. ports (spring_api)-> My default, the spring_api is mapped to the port 3001 of the host system. 
+
+### renewal of data
+The application needs to be stopped and restarted before midnight. I use cron with the stopcontainers.sh and starcontainers.sh to achieve this. I run stopcontainer.sh at 23:45 and startcontainers.sh at 00:05 as cron-job.
