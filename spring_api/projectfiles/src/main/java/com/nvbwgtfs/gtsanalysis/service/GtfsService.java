@@ -10,25 +10,24 @@ import java.util.Optional;
 
 public interface GtfsService {
 
-    Optional<List<NVBWMeasurement>> getNVBWMeasurements();
 
-    Optional<List<EnturMeasurement>>getEnturMeasurements();
+
 
     Optional<List<HourlyAggregate>> getGTFSHourlySummary();
 
-    Optional<List<HourlyAggregate>> getMiGTFSHourlySummary();
 
 
-    Optional<List<NVBWMeasurement>> getWeeksNVBWMeasurements();
 
-    Optional<List<NVBWMeasurement>> getWeeksMiNVBWMeasurements();
+
+
+
 
 
 
 
     Optional<List<WeeklySummaryAgency>> getWeeklyAgencySummary();
 
-    Optional<List<WeeklySummaryAgency>> getMiWeeklyAgencySummary();
+
 
 
 }

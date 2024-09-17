@@ -18,43 +18,26 @@ public class GtfsServiceImpl implements  GtfsService {
     private GtfsRepository gtfsRepository;
 
 
-    @Override
-    public Optional<List<NVBWMeasurement>> getNVBWMeasurements() {
-        return gtfsRepository.getNVBWMeasurement();
-    }
 
-    @Override
-    public Optional<List<EnturMeasurement>> getEnturMeasurements() {
-        return gtfsRepository.getEnturMeasurement();
-    }
+
+
+
 
     @Override
     public Optional<List<HourlyAggregate>> getGTFSHourlySummary() {
        return gtfsRepository.getGTFSHourlySummary();
     }
 
-    @Override
-    public Optional<List<HourlyAggregate>> getMiGTFSHourlySummary() {
-        return gtfsRepository.getMiGTFSHourlySummary();
-    }
 
-    @Override
-    public Optional<List<NVBWMeasurement>> getWeeksNVBWMeasurements() {
-        return gtfsRepository.getWeeksNVBWMeasurement();
-    }
 
-    @Override
-    public Optional<List<NVBWMeasurement>> getWeeksMiNVBWMeasurements() {
-        return gtfsRepository.getWeeksMiNVBWMeasurement();
-    }
+
+
+
 
     @Override
     public Optional<List<WeeklySummaryAgency>> getWeeklyAgencySummary() {
         return gtfsRepository.getWeeklySummmaryAgency();
     }
 
-    @Override
-    public Optional<List<WeeklySummaryAgency>> getMiWeeklyAgencySummary() {
-        return gtfsRepository.getMiWeeklySummmaryAgency();
-    }
+
 }

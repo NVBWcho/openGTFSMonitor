@@ -27,55 +27,15 @@ public class GTFSController {
     GtfsService gtfsService;
 
 
-    @GetMapping("/nvbw")
-    public ResponseEntity<List<NVBWMeasurement>> getNVBWMeasurements(){
-
-        Optional<List<NVBWMeasurement>> nvbwMeasurements=gtfsService.getNVBWMeasurements();
-        if(nvbwMeasurements.isPresent()){
-            return new ResponseEntity<>(nvbwMeasurements.get(), HttpStatus.OK);
-        }else {
-            return  new ResponseEntity<>(HttpStatus.OK);
-        }
-
-    }
-
-    @GetMapping("/nvbwWeek")
-
-    public ResponseEntity<List<NVBWMeasurement>> getWeeksNVBWMeasurements(){
-
-        Optional<List<NVBWMeasurement>> nvbwMeasurements=gtfsService.getWeeksNVBWMeasurements();
-        if(nvbwMeasurements.isPresent()){
-            return new ResponseEntity<>(nvbwMeasurements.get(), HttpStatus.OK);
-        }else {
-            return  new ResponseEntity<>(HttpStatus.OK);
-        }
-
-    }
-
-    @GetMapping("/miWeek")
-    public ResponseEntity<List<NVBWMeasurement>> getWeeksMiNVBWMeasurements(){
-
-        Optional<List<NVBWMeasurement>> nvbwMeasurements=gtfsService.getWeeksMiNVBWMeasurements();
-        if(nvbwMeasurements.isPresent()){
-            return new ResponseEntity<>(nvbwMeasurements.get(), HttpStatus.OK);
-        }else {
-            return  new ResponseEntity<>(HttpStatus.OK);
-        }
-
-    }
 
 
 
-    @GetMapping("/entur")
-    public ResponseEntity<List<EnturMeasurement>> getEnturMeasurements(){
 
-        Optional<List<EnturMeasurement>> enturMeasurements=gtfsService.getEnturMeasurements();
-        if(enturMeasurements.isPresent()){
-            return new ResponseEntity<>(enturMeasurements.get(),HttpStatus.OK);
-        }else{
-            return new ResponseEntity<>(HttpStatus.OK);
-        }
-    }
+
+
+
+
+
 
 
     @GetMapping("/hourlyUpdates")
@@ -89,16 +49,7 @@ public class GTFSController {
         }
     }
 
-    @GetMapping("/miHourlyUpdates")
 
-    public  ResponseEntity<List<HourlyAggregate>> getMiHourlyAggregates(){
-        Optional<List<HourlyAggregate>> gtfsrealtimeUpdates=gtfsService.getMiGTFSHourlySummary();
-        if(gtfsrealtimeUpdates.isPresent()){
-            return  new ResponseEntity<>(gtfsrealtimeUpdates.get(),HttpStatus.OK);
-        }else {
-            return  new ResponseEntity<>(HttpStatus.OK);
-        }
-    }
 
     @GetMapping("/agencyweekly")
     public  ResponseEntity<List<WeeklySummaryAgency>> getWeeklyAgencySummary(){
@@ -111,16 +62,7 @@ public class GTFSController {
     }
 
 
-    @GetMapping("/miagencyweekly")
 
-    public  ResponseEntity<List<WeeklySummaryAgency>> getMiWeeklyAgencySummary(){
-        Optional<List<WeeklySummaryAgency>> weeklySummaryAgencies=gtfsService.getMiWeeklyAgencySummary();
-        if(weeklySummaryAgencies.isPresent()){
-            return  new ResponseEntity<>(weeklySummaryAgencies.get(),HttpStatus.OK);
-        }else{
-            return new ResponseEntity<>(HttpStatus.OK);
-        }
-    }
 
 
 

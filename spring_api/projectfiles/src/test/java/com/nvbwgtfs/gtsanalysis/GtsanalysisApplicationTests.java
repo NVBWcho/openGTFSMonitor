@@ -21,9 +21,9 @@ class GtsanalysisApplicationTests {
 	}
 
 	@Test
-	void testMiHourlyAggregates(){
+	void testHourlyAggregates(){
 
-      Optional<List<HourlyAggregate>> miaggregates=gtfsService.getMiGTFSHourlySummary();
+      Optional<List<HourlyAggregate>> miaggregates=gtfsService.getGTFSHourlySummary();
 
 	  for (int i=0;i<miaggregates.get().size();i++){
 		  System.out.println(miaggregates.get().get(i));
@@ -32,22 +32,6 @@ class GtsanalysisApplicationTests {
 
 	}
 
-	@Test
-	void testMiWeeklyAgencySummary(){
-		Optional<List<WeeklySummaryAgency>> weeklySummaryAgencies=gtfsService.getMiWeeklyAgencySummary();
 
-		for(WeeklySummaryAgency w: weeklySummaryAgencies.get()){
-			System.out.println(w);
-		};
-	}
-
-	@Test
-
-	void testMiWeeksMacthing(){
-		Optional<List<NVBWMeasurement>> nvbwMeasurements=gtfsService.getWeeksMiNVBWMeasurements();
-		for(NVBWMeasurement w: nvbwMeasurements.get()){
-			System.out.println(w);
-		}
-	}
 
 }
