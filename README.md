@@ -11,7 +11,7 @@ The openGTFS consists of two parts. The first part, referred to as python_server
 
 ### Installation
 Spinning up an application is simple- clone the repository, cd into it. Then you run it using:
-```docker
+
    docker-compose up --build
 
 ### Important configurable parameters
