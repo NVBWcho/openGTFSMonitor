@@ -20,7 +20,7 @@ from getrootdirectory import getRootDirectory
 
 
 
-class MentzRealtimeVersusScheduleComparator:
+class RealtimeVersusScheduleComparator:
     def __init__(self,rootPath) -> None:
         print(rootPath)
         

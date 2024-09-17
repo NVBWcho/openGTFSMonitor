@@ -2,7 +2,7 @@ from time import sleep
 from datetime import datetime,time
 start_time = datetime.now()
 import os
-from gtfscomparator.gtfscomparator import MentzRealtimeVersusScheduleComparator
+from gtfscomparator.gtfscomparator import RealtimeVersusScheduleComparator
 import traceback
 from getrootdirectory import getRootDirectory
 
@@ -46,14 +46,14 @@ while  (datetime.now().time()<endTime):
         
         print("Comparator started at"+ str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
         
-        myUpdater=MentzRealtimeVersusScheduleComparator(getRootDirectory())
+        myUpdater=RealtimeVersusScheduleComparator(getRootDirectory())
         newflatdf=myUpdater.updateFlatDataset()
         newflatdf.to_pickle(os.path.join(getRootDirectory(),"data","flat"+".pkl"))
         sleep(120)
     except:
         
         try:
-            myNotifier=MentzRealtimeVersusScheduleComparator(getRootDirectory())
+            myNotifier=RealtimeVersusScheduleComparator(getRootDirectory())
             myNotifier.notifyViaEmail()
         except:
             print("Email could not be sent")    

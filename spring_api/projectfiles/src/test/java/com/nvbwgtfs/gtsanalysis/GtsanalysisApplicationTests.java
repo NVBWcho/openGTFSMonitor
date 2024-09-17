@@ -1,9 +1,9 @@
 package com.nvbwgtfs.gtsanalysis;
 
-import com.nvbwgtfs.gtsanalysis.entities.EnturMeasurement;
+
 import com.nvbwgtfs.gtsanalysis.entities.HourlyAggregate;
-import com.nvbwgtfs.gtsanalysis.entities.NVBWMeasurement;
-import com.nvbwgtfs.gtsanalysis.entities.WeeklySummaryAgency;
+
+
 import com.nvbwgtfs.gtsanalysis.service.GtfsService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
