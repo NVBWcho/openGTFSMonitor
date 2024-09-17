@@ -2,7 +2,7 @@
 echo "stoppin containers"
 
 echo $PATH
-cd  /home/adm_nvbw_lx_choudhur@efa-ext.local/Documents2/DockerTutorials/periodic
+cd  /home/your_path
 
 docker-compose down
 

@@ -10,7 +10,7 @@ The openGTFS consists of two parts. The first part, referred to as python_server
 2. Spring_API: This Rest API provides two simple end points ->/gtfsAnalyse/hourlyUpdates: This provides the fraction of trips that were operating during that hour, which have recieved at least one update in the GTFS-RT feed.  The second endpoint is /gtfsAnalyse/agencyWeekly- It gives the fraction of trips in the week , which are operated by a given agency, which have recieved at least one GTFS update during its service-day.
 
 ### Installation
-    Spinning up an application is simple- clone the repository, cd into it and then docker-compose up--build. By default it will launch a the REST API on port 3001 (see below)
+Spinning up an application is simple- clone the repository, cd into it.
 
 ### Important configurable parameters
 
