@@ -17,7 +17,7 @@ Spinning up an application is simple- clone the repository, cd into it. Then you
 ### Important configurable parameters
 
  1. GTFS_URL -> The link from which one can download the GTFS Feed
- 2. REALTIME_URL ->Link for the GTFS-RT feed
+ 2. REALTIME_URL ->Link for the GTFS-RT feed (note that you should delete the old volumes after changing the url. docker-compose down -v should do the work. One should rebuild after changing the url)
  3. ADDED_TRIPS-> Some data providers ADDED flag in TripDescriptor to specify that its a added trip. The value is false by default
  4. ports (spring_api)-> My default, the spring_api is mapped to the port 3001 of the host system. 
 
