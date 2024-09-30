@@ -7,7 +7,7 @@ The openGTFS consists of two parts. The first part, referred to as python_server
 
 1. Python server: The python_server component will create a table with the trips for the current service day. Then it will listen to the GTFS realtime feed for updates for those trips. It will update the rows for the trips after every iteration of listening action (set to repeat every 2 minutes,can be changed in the source code).
 
-2. Spring_API: This Rest API provides two simple end points ->/gtfsAnalyse/hourlyUpdates: This provides the fraction of trips that were operating during that hour, which have recieved at least one update in the GTFS-RT feed.  The second endpoint is /gtfsAnalyse/agencyWeekly- It gives the fraction of trips in the week , which are operated by a given agency, which have recieved at least one GTFS update during its service-day.
+2. Spring_API: This Rest API provides two simple end points ->/gtfsAnalyse/hourlyUpdates: This provides the fraction of trips that were operating during that hour, which have recieved at least one update in the GTFS-RT feed.  The second endpoint is /gtfsAnalyse/agencyweekly- It gives the fraction of trips in the week , which are operated by a given agency, which have recieved at least one GTFS update during its service-day.
 
 ### Installation
 Spinning up an application is simple- clone the repository, cd into it. Then you run it using:
