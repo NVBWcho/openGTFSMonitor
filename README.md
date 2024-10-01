@@ -9,7 +9,7 @@ The openGTFS consists of three parts. The first part, referred to as python_serv
 
 2. Spring_API: This Rest API provides two simple end points ->/gtfsAnalyse/hourlyUpdates: This provides the fraction of trips that were operating during that hour, which have recieved at least one update in the GTFS-RT feed.  The second endpoint is /gtfsAnalyse/agencyweekly- It gives the fraction of trips in the week , which are operated by a given agency, which have recieved at least one GTFS update during its service-day.
 
-3. React-frontend: A simple react based client to visualize the statistics. This part is currently not integrated with the docker-compose file (this will follow soon). In the mean time, one can lauch the client lancuhing the react-application from the sub directory (either use the production ready build or the development version).
+3. React-frontend: A simple react based client to visualize the statistics. The react application will be lauched on port 4500 while the API will be launched on port 3001. If you are using this in a production environment, it may make sense to let a nginx container take care of the routing. Note that if you do change the port of the spring_container, you have to change the api url in the src code SecurityContext.js file of react-frontend directory.
 
 ### Installation
 Spinning up an application is simple- clone the repository, cd into it. Then you run it using:
