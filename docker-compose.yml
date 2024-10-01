@@ -68,5 +68,13 @@ services:
       - db
       - python_server
 
+  react-frontend:
+    build:
+      context: ./react-frontend
+      dockerfile: Dockerfile
+    container_name: react-frontend
+    ports:
+      - "4500:80"      
+
 volumes:
   postgres_data:
