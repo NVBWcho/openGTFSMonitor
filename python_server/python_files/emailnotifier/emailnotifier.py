@@ -30,9 +30,9 @@ class EmailNotifier:
     def notifyStaticExportExceptionByEmail(self):
         port = 587  # For starttls
         smtp_server = "smtp.gmail.com"
-        sender_email = "kangkan.dc1@gmail.com"
-        receiver_email = "kangkan.dc1@gmail.com"
-        password = "lizlieooojggyqxp"
+        sender_email = "yourSenderEmail"
+        receiver_email = "yourRecieverEmail"
+        password = "yourPassword"
         message = """\
         Subject: Exception at GTFS Static Export Script
 
@@ -50,9 +50,9 @@ class EmailNotifier:
     def notifyRealtimeParsingExceptionByEmail(self):
         port = 587  # For starttls
         smtp_server = "smtp.gmail.com"
-        sender_email = "kangkan.dc1@gmail.com"
-        receiver_email = "kangkan.dc1@gmail.com"
-        password = "lizlieooojggyqxp"
+        sender_email = "yourSenderEmail"
+        receiver_email = "yourRecieverEmail"
+        password = "yourPassword"
         message = """\
         Subject: Exception at GTFS RT Parsing  Script
 
