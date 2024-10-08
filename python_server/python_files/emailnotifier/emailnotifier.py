@@ -9,9 +9,9 @@ class EmailNotifier:
     def simpleNotification(self,subject,body):
         port = 587  # For starttls
         smtp_server = "smtp.gmail.com"
-        sender_email = "kangkan.dc1@gmail.com"
-        receiver_email = "kangkan.dc1@gmail.com"
-        password = "lizlieooojggyqxp"
+        sender_email = "yourSenderEmail"
+        receiver_email = "yourRecieverEmail"
+        password = "yourpassword"
         
         message=EmailMessage()
         message["Subject"]=subject
